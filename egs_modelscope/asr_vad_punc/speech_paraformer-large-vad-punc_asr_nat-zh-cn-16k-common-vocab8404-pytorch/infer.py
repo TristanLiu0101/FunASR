@@ -3,8 +3,10 @@ from modelscope.utils.constant import Tasks
 
 if __name__ == '__main__':
     # audio_in = 'https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav'
-    audio_in = "C:/Users/liuzhechen/Desktop/S0002/SCP/wav.scp"
-    output_dir = "C:/Users/liuzhechen/Desktop/S0002/outputs_v032"
+    # audio_in = "C:/Users/liuzhechen/Desktop/S0002/SCP/wav.scp"
+    # output_dir = "C:/Users/liuzhechen/Desktop/S0002/outputs_v032"
+    audio_in = "C:/Users/liuzhechen/Desktop/asr_test/scp/wav.scp"
+    output_dir = "C:/Users/liuzhechen/Desktop/asr_test/outputs_v0.3.3"
     inference_pipeline = pipeline(
         task=Tasks.auto_speech_recognition,
         model='damo/speech_paraformer-large-vad-punc_asr_nat-zh-cn-16k-common-vocab8404-pytorch',
