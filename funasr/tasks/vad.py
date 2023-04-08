@@ -319,8 +319,8 @@ class VADTask(AbsTask):
             cls,
             config_file: Union[Path, str] = None,
             model_file: Union[Path, str] = None,
-            cmvn_file: Union[Path, str] = None,
             device: str = "cpu",
+            cmvn_file: Union[Path, str] = None,
     ):
         """Build model from the files.
 
@@ -344,8 +344,8 @@ class VADTask(AbsTask):
 
         with config_file.open("r", encoding="utf-8") as f:
             args = yaml.safe_load(f)
-        if cmvn_file is not None:
-            args["cmvn_file"] = cmvn_file
+        #if cmvn_file is not None:
+        args["cmvn_file"] = cmvn_file
         args = argparse.Namespace(**args)
         model = cls.build_model(args)
         model.to(device)
